@@ -12,8 +12,8 @@ export class TabViewComponent {
   @Input() tabs: Tab[] = [];
   @Input() currentTemplate: TemplateRef<any>;
 
-  @Output() remove: EventEmitter<any> = new EventEmitter();
-  @Output() clicked: EventEmitter<any> = new EventEmitter();
+  @Output() remove: EventEmitter<string> = new EventEmitter();
+  @Output() clicked: EventEmitter<Tab> = new EventEmitter();
   
 
 

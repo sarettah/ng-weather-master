@@ -22,13 +22,15 @@ export class CurrentConditionsComponent{
 
 
   currentTemplate:  TemplateRef<any> ;
-  location: any;
+  location: ConditionsAndZip;
+
   @ViewChild('template1') template1: TemplateRef<any> ;
   
   constructor(){
     effect(() => {
       this.tabs = this.currentConditionsByZip().map(item=>new Tab(item.data.name+' ('+item.zip+')', item, this.template1));
       this.location = this.tabs[0]?.data;
+      console.log(this.template1, typeof this.template1)
     });
   }
 
@@ -42,13 +44,13 @@ export class CurrentConditionsComponent{
     this.router.navigate(['/forecast', zipcode])
   }
 
-  remove(zip){
+  remove(zip:string){
     this.locationService.removeLocation(zip)
     this.weatherService.removeCurrentConditions(zip);
   }
 
 
-  tabClick(tab){
+  tabClick(tab: Tab){
     this.location = tab.data;
     this.currentTemplate = tab.template;
   }
