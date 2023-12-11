@@ -30,7 +30,6 @@ export class CurrentConditionsComponent{
     effect(() => {
       this.tabs = this.currentConditionsByZip().map(item=>new Tab(item.data.name+' ('+item.zip+')', item, this.template1));
       this.location = this.tabs[0]?.data;
-      console.log(this.template1, typeof this.template1)
     });
   }
 
