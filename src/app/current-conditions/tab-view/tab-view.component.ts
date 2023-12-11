@@ -10,7 +10,7 @@ export class TabViewComponent {
 
 
   @Input() tabs: Tab[] = [];
-  @Input() currentTemplate: TemplateRef<any>;
+  @Input() currentTemplate: TemplateRef<string>;
 
   @Output() remove: EventEmitter<string> = new EventEmitter();
   @Output() clicked: EventEmitter<Tab> = new EventEmitter();

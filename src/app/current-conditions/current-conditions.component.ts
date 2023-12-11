@@ -21,10 +21,10 @@ export class CurrentConditionsComponent{
   protected tabs = [];
 
 
-  currentTemplate:  TemplateRef<any> ;
+  currentTemplate:  TemplateRef<string> ;
   location: ConditionsAndZip;
 
-  @ViewChild('template1') template1: TemplateRef<any> ;
+  @ViewChild('template1') template1: TemplateRef<string> ;
   
   constructor(){
     effect(() => {
