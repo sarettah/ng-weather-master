@@ -1,0 +1,9 @@
+<div class="well">
+  <h2>Enter a zipcode:</h2>
+  <input type="text" [(ngModel)]="zipcodeString" placeholder="Zipcode" class="form-control" >
+  <br>
+
+  <button class="btn btn-primary" (click)="addLocation(zipcodeString)" >
+    Add location
+  </button>
+</div>

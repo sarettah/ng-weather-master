@@ -1,0 +1,31 @@
+
+.tabView{
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  
+  .tab{
+    cursor: pointer;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px;
+    width: fit-content;
+    margin-right: 5px;
+  }
+  
+  .close{
+    margin-left: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+  }
+  
+  .title{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  

@@ -1,0 +1,9 @@
+
+<div class="tabView">
+  <div class="tab" *ngFor="let tab of tabs" (click)="tabClick(tab)">
+    <span class="title">{{tab.name}}</span>
+    <span class="close" (click)="close(tab.data.zip)"> x </span>
+  </div>
+</div>
+
+<ng-container *ngTemplateOutlet="currentTemplate"></ng-container>
