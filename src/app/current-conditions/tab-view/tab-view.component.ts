@@ -1,4 +1,4 @@
-import { Component,  EventEmitter, Input,  Output, TemplateRef } from '@angular/core';
+import { Component,  ElementRef,  EventEmitter, Input,  Output, TemplateRef } from '@angular/core';
 import { Tab } from '../tab.model';
 
 @Component({
@@ -10,7 +10,7 @@ export class TabViewComponent {
 
 
   @Input() tabs: Tab[] = [];
-  @Input() currentTemplate: TemplateRef<string>;
+  @Input() currentTemplate: TemplateRef<ElementRef>;
 
   @Output() remove: EventEmitter<string> = new EventEmitter();
   @Output() clicked: EventEmitter<Tab> = new EventEmitter();

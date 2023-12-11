@@ -1,4 +1,4 @@
-import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, effect, inject, OnDestroy, OnInit, Signal, TemplateRef, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, effect, ElementRef, inject, OnDestroy, OnInit, Signal, TemplateRef, ViewChild} from '@angular/core';
 import {WeatherService} from "../weather.service";
 import {LocationService} from "../location.service";
 import {Router} from "@angular/router";
@@ -21,10 +21,10 @@ export class CurrentConditionsComponent{
   protected tabs = [];
 
 
-  currentTemplate:  TemplateRef<string> ;
+  currentTemplate:  TemplateRef<ElementRef> ;
   location: ConditionsAndZip;
 
-  @ViewChild('template1') template1: TemplateRef<string> ;
+  @ViewChild('template1') template1: TemplateRef<ElementRef> ;
   
   constructor(){
     effect(() => {
